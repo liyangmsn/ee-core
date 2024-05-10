@@ -138,7 +138,7 @@ class EeApp extends BaseApp {
         modeInfo = developmentModeConfig.mode[selectMode];
       }
 
-      url = modeInfo.protocol + modeInfo.hostname + ':' + modeInfo.port;
+      url = modeInfo.protocol + modeInfo.hostname + ':' + modeInfo.port + modeInfo.indexPath;
       if (Conf.isFileProtocol(modeInfo)) {
         url = path.join(this.config.homeDir, modeInfo.directory, modeInfo.indexPath);
         load = 'file';
